@@ -16,13 +16,6 @@ app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 
-// app.get('*', (req,res)=>{
-//     res.sendFile(__dirname +'/public/index.html')
-// });
-
-// app.get('/notes', (req,res)=>{
-//     res.sendFile(__dirname + '/public/notes.html');
-// });
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);

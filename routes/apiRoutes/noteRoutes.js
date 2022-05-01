@@ -1,18 +1,30 @@
+const router = require('express').Router();
+const{createNote,deleteNote,findNote}=require('../../lib/notes');
 
-const fs = require('fs');
-const path = require('path')
-const notes = require('../../db/db');
+const {notesArr} = require('../../db/db');
 
 router.get('/notes', (req,res)=>{
-    const result=notes;
-    res.json(result);
+    let savedNotes=notesArr
+    res.json(savedNotes);
 })
 
-function createNewNote(body, notesArr){
-    const newNote = body;
-    notesArr.push(newNote);
-    fs.writeFileSync(
-        path.join(__dirname, '../../db/db.json'),
-        JSON.stringify(notesArr, null, 2)
-    )
+router.post("/notes", function(req,res){
+    req.body.id=notesArr.length.toString();
+    let note=createNote(req.body,notesArr);
+    res.json(note);
+})
+
+router.delete('/notes/:id',(req,res)=>{
+    const note = findNote(req.params.id, notesArr)
+    if(note){
+        console.log(note)
+        deleteNote(req.params.id,notesArr);
+        location.reload()
+        
+    }else{
+        console.log("no note found1")
     }
+})
+
+module.exports=router;
+    

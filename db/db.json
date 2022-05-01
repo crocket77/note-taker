@@ -1,6 +1,29 @@
-[
+{
+  "notesArr": [
     {
-        "title":"Test Title",
-        "text":"Test text"
+      "title": "making a new time",
+      "text": "nowsas",
+      "id": "0"
+    },
+    {
+      "title": "new noterizer",
+      "text": "asdfas",
+      "id": "1"
+    },
+    {
+      "title": "will it break the server",
+      "text": "maybe",
+      "id": "2"
+    },
+    {
+      "title": "adfasdfagda",
+      "text": "adsgadsgfasdfga",
+      "id": "3"
+    },
+    {
+      "title": "ADSGADSGADGDA",
+      "text": "AGDFAHBAB ZDB ZDFGB GF",
+      "id": "4"
     }
-]
+  ]
+}
