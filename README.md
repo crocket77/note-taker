@@ -10,6 +10,7 @@ An app that uses express.js for note taking.
 * [License](#license)
 * [Contributing](#contributing)
 * [Github](#github)
+* [Heroku](#heroku)
     
 ## Installation
 
@@ -26,3 +27,7 @@ Ethan Pfeiffer
 
 ## Github
 https://github.com/crocket77/note-taker
+
+## Heroku
+The app has been deployed on heroku
+https://noteriz.herokuapp.com/notes
